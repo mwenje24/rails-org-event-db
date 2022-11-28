@@ -9,7 +9,8 @@ class EventCategoriesController < ApplicationController
     end
 
     def create
-        render json: EventCategory.create(event_category_params), status: :created
+        EventCategory.create(event_category_params)
+        render json: EventCategory.all, status: :created
     end
 
     def update
@@ -24,8 +25,8 @@ class EventCategoriesController < ApplicationController
     def destroy
         event_category = find_event_category
         event_category.destroy
-        render json: {}, status: :ok
-      end
+        render json: EventCategory.all, status: :ok
+    end
 
     private
 

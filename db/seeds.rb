@@ -26,3 +26,10 @@
 #     "created_at": "2022-11-26T14:39:02.314Z",
 #     "updated_at": "2022-11-26T14:39:02.314Z"
 # }
+
+# {
+#     "name": "David Mwenje",
+#     "email": "davidmwenje@gmail.com",
+#     "password": "dm12345",
+#     "password_digest": "dm12345"
+# }

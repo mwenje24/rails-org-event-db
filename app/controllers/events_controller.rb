@@ -10,7 +10,8 @@ class EventsController < ApplicationController
     end
 
     def create
-        render json: Event.create(event_params), status: :created
+        Event.create(event_params)
+        render json: Event.all, status: :created
     end
 
     def update
@@ -32,7 +33,7 @@ class EventsController < ApplicationController
     def destroy
         event = find_event
         event.destroy
-        render json: {}, status: :ok
+        render json: Event.all, status: :ok
       end
 
     private
