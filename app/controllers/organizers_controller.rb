@@ -12,6 +12,7 @@ class OrganizersController < ApplicationController
             render json: { error: "Not authorized" }, status: :unauthorized
         end
     end
+    
 
     def create
         render json: Organizer.create(organizer_params), status: :created
